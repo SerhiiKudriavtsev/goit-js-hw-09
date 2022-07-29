@@ -1,0 +1,46 @@
+.tumb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#datetime-picker {
+  text-align: center;
+  margin-top: 40px;
+}
+
+button {
+  cursor: pointer;
+  background-color:cornflowerblue;
+  border-radius: 5px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  padding: 10 40;
+  width: min-content;
+  align-self: center;
+}
+
+.input-start {
+  display: flex;
+  flex-direction: column;
+}
+
+.timer {
+  display: flex;
+}
+
+.field:not(:last-child){
+  margin-right: 10;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.value {
+  font-size: 60px;
+  color: #00008b;
+}
