@@ -7,7 +7,7 @@ const btnStop = document.querySelector('[data-stop]');
 const body = document.querySelector('body');
 btnStop.setAttribute('disabled', true);
 if (!btnStart.disabled) {
-const btnStartTimerId = setInterval(() => {
+btnStartTimerId = setInterval(() => {
     btnStart.style.backgroundColor = getRandomHexColor();
   }, 100);
 }
