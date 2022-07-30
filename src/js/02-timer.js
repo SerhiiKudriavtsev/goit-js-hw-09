@@ -26,7 +26,6 @@ const options = {
     localStorage.setItem('selectedData', selectedDates[0]);
     selectedDate = new Date(localStorage.getItem('selectedData'));
     btn.disabled = false;
-    dateInput.disabled = false;
     if (selectedDate <= new Date()) {
       Notify.init({position: 'center-center', closeButton: false})
       Notify.failure("Please choose a date in the future");
@@ -45,6 +44,7 @@ btn.addEventListener('click', timer);
 
 function timer() {
   btn.disabled = true;
+  dateInput.disabled = true;
   if (timerId) clearInterval(timerId);
   timerId = setInterval(() => { counter() }, 1000);
 }
@@ -55,7 +55,6 @@ function counter() {
   dateDifference = selectedDate - currentDate;
   if (dateDifference > 0) {
     convertMs(dateDifference);
-    dateInput.disabled = true;
   }
   else {
     Notify.init({ position: 'center-center' });
