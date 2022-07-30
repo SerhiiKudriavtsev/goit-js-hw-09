@@ -33,7 +33,7 @@ const options = {
       btn.disabled = true;
       return;
     };
-    for (v of value) {
+    for (let v of value) {
       v.style.color = '#00008b';
     };
   },
@@ -94,7 +94,7 @@ function addLeadingZero(value) {
 };
 
 function colorChange(el) {
-  for (v of value) {
+  for (let v of value) {
     if (el === 5) v.style.color = '#de05ff';
     if (el === 4) v.style.color = '#f21505';
     if (el === 3) v.style.color = '#ff9f05';
