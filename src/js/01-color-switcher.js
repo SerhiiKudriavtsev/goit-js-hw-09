@@ -6,11 +6,11 @@ const btnStop = document.querySelector('[data-stop]');
 
 const body = document.querySelector('body');
 btnStop.setAttribute('disabled', true);
-// if (!btnStart.disabled) {
+if (!btnStart.disabled) {
 btnStartTimerId = setInterval(() => {
     btnStart.style.backgroundColor = getRandomHexColor();
   }, 100);
-// }
+}
 
 btnStart.addEventListener('click', () => {
   btnStart.setAttribute('disabled', true);
